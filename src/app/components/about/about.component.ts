@@ -143,6 +143,8 @@ export class AboutComponent {
   ];
 
   handleImageError(event: any) {
-    event.target.src = '/public/assets/images/Not-Personal-Photo-Found.png';
+    event.target.onerror = null;
+
+    event.target.src = '/assets/images/Not-Personal-Photo-Found.png';
   }
 }
