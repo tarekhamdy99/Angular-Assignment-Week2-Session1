@@ -1,0 +1,33 @@
+nav {
+  z-index: 100;
+}
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: #ffffff8b;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+nav ul li a.active {
+  color: #ffffff;
+}
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  top: 25px;
+  background-color: #fff;
+  transition: all 0.4s;
+}
+nav ul li:hover a {
+  color: #ffffff;
+}
+nav ul li a.active::before {
+  width: 100%;
+}
+nav ul li a.active::before {
+  width: 100%;
+}

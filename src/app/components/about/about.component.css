@@ -1,0 +1,216 @@
+.about-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+.stat-item {
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15) !important;
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-card {
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.team-card {
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
+}
+
+.team-image-wrapper {
+  width: 120px;
+  height: 120px;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .team-image {
+  border-color: #667eea;
+}
+
+.social-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(102, 126, 234, 0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .social-overlay {
+  opacity: 1;
+}
+
+.social-overlay .btn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.social-overlay .btn:hover {
+  transform: scale(1.1);
+  background: #667eea;
+  color: white !important;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.milestone-card {
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.milestone-card:hover {
+  transform: translateY(-10px);
+  border-color: #667eea !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.contact-form {
+  border: 1px solid #e0e0e0;
+}
+
+.form-control {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.15);
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-shadow {
+  transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 50vh;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .stat-item {
+    padding: 1.5rem !important;
+  }
+
+  .team-image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .value-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .value-icon i {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero h1 {
+    font-size: 2rem !important;
+  }
+
+  .about-hero .btn {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1.5rem !important;
+  }
+
+  .display-5 {
+    font-size: 2rem !important;
+  }
+
+  .stat-item .display-4 {
+    font-size: 2rem !important;
+  }
+}

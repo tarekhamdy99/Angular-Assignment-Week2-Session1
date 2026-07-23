@@ -1,0 +1,268 @@
+/* ======================================== */
+/* Hero Section */
+/* ======================================== */
+.contact-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+/* ======================================== */
+/* Contact Info Cards */
+/* ======================================== */
+.contact-card {
+  transition: all 0.3s ease;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  border-color: #667eea !important;
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15) !important;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background: #667eea !important;
+  color: white !important;
+  transform: scale(1.1);
+}
+
+/* ======================================== */
+/* Form Styles */
+/* ======================================== */
+.form-wrapper {
+  border: 1px solid #f0f0f0;
+}
+
+.form-control {
+  border: 2px solid #e8e8e8;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.15);
+  background: #ffffff;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+  background-image: none;
+}
+
+.form-control.is-invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.15);
+}
+
+.invalid-feedback {
+  font-size: 0.8rem;
+}
+
+.alert-success {
+  background: #d4edda;
+  border: none;
+  color: #155724;
+}
+
+/* ======================================== */
+/* Map Styles */
+/* ======================================== */
+.map-wrapper {
+  position: relative;
+  background: #f0f0f0;
+}
+
+.map-wrapper iframe {
+  display: block;
+  min-height: 250px;
+}
+
+/* ======================================== */
+/* FAQ Styles */
+/* ======================================== */
+.faq-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background: #f8f9fa;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 12px;
+}
+
+.faq-question button {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.faq-question button:hover {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-question h5 {
+  color: #667eea;
+}
+
+.faq-answer {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================================== */
+/* Social Buttons */
+/* ======================================== */
+.social-btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+}
+
+.social-btn:hover {
+  background: #667eea;
+  color: white !important;
+  border-color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* ======================================== */
+/* CTA Section */
+/* ======================================== */
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* ======================================== */
+/* Utilities */
+/* ======================================== */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+/* ======================================== */
+/* Responsive Adjustments */
+/* ======================================== */
+@media (max-width: 992px) {
+  .contact-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 40vh;
+  }
+
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-hero .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .display-6 {
+    font-size: 1.5rem;
+  }
+
+  .stat-box .h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem !important;
+  }
+
+  .map-wrapper iframe {
+    min-height: 200px;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-hero .lead {
+    font-size: 1rem;
+  }
+
+  .form-control-lg {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
