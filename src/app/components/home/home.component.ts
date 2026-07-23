@@ -578,7 +578,7 @@ export class HomeComponent {
   handleImageError(event: any) {
     event.target.onerror = null;
 
-    event.target.src = '/assets/images/not_foundimage.png';
+    event.target.src = 'assets/images/not_foundimage.png';
   }
 
   //^ Chnage Image Method
