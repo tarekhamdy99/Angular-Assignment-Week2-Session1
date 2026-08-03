@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IProductData } from '../../interfaces/home/iproduct-data';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-home',
-  imports: [FormsModule],
+  imports: [FormsModule, ModalComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -594,5 +595,17 @@ export class HomeComponent {
     return this.productList.filter((product) =>
       product.title.toLowerCase().includes(this.searchValue.trim().toLowerCase()),
     );
+  }
+
+  @ViewChild(ModalComponent) modal!: ModalComponent;
+
+  //^ Open Modal Method
+  openHomeModal(): void {
+    this.modal.openModal();
+  }
+
+  //^ Close Modal Method
+  closeHomeModal(): void {
+    this.modal.closeModal();
   }
 }

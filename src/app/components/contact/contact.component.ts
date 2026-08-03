@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IContactInfo } from '../../interfaces/contact/icontact-info';
 import { IFaqs } from '../../interfaces/contact/ifaqs';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [ModalComponent],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
@@ -64,4 +65,16 @@ export class ContactComponent {
         'Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary by location.',
     },
   ];
+
+  @ViewChild(ModalComponent) modal!: ModalComponent;
+
+  //^ Open Modal Method
+  openContactModal(): void {
+    this.modal.openModal();
+  }
+
+  //^ Close Modal Method
+  closeContactModal(): void {
+    this.modal.closeModal();
+  }
 }

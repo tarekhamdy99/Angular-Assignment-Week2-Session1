@@ -1,3 +1,28 @@
+<!--^ Show Modal Component -->
+<section class="container text-center pt-4">
+  <div class="d-flex justify-content-center gap-3 my-5">
+    <button (click)="openContactModal()" class="btn btn-success rounded-pill px-4">
+      <i class="fas fa-headset me-2"></i> Show Modal
+    </button>
+  </div>
+  <app-modal>
+    <div modal-title class="text-success"><i class="fas fa-envelope me-2"></i>Customer Support</div>
+
+    <div modal-body>
+      <p class="mb-0 text-muted">
+        Our support team is available 24/7 to assist you with any inquiries or issues.
+      </p>
+    </div>
+
+    <div modal-footer>
+      <button (click)="closeContactModal()" class="btn btn-success rounded-pill px-4">
+        Contact Now
+      </button>
+    </div>
+  </app-modal>
+</section>
+
+<!--^ Contact Component -->
 <section class="contact-hero position-relative text-white">
   <div class="hero-overlay"></div>
   <div class="container position-relative z-1 py-5">

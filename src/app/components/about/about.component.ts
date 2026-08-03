@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ITeamMember } from '../../interfaces/about/iteam-member';
 import { IAboutStatistics } from '../../interfaces/about/iabout-statistics';
 import { IAboutValues } from '../../interfaces/about/iabout-values';
 import { IAboutTestimonials } from '../../interfaces/about/iabout-testimonials';
 import { IAboutMilestones } from '../../interfaces/about/iabout-milestones';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ModalComponent],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
@@ -146,5 +147,17 @@ export class AboutComponent {
     event.target.onerror = null;
 
     event.target.src = 'assets/images/Not-Personal-Photo-Found.png';
+  }
+
+  @ViewChild(ModalComponent) modal!: ModalComponent;
+
+  //^ Open Modal Method
+  openAboutModal(): void {
+    this.modal.openModal();
+  }
+
+  //^ Close Modal Method
+  closeAboutModal(): void {
+    this.modal.closeModal();
   }
 }

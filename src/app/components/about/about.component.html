@@ -1,3 +1,28 @@
+<!--^ Show Modal Component -->
+<section class="container text-center pt-4 mt-5">
+  <div class="d-flex justify-content-center mb-3">
+    <button (click)="openAboutModal()" class="btn btn-info text-white rounded-pill px-4">
+      <i class="fas fa-info-circle me-2"></i> About Modal
+    </button>
+  </div>
+  <app-modal>
+    <div modal-title class="text-info"><i class="fas fa-users me-2"></i>About Us</div>
+
+    <div modal-body>
+      <p class="mb-0 text-muted">
+        We are a specialized company providing top-tier web development and e-commerce solutions
+        with high quality.
+      </p>
+    </div>
+
+    <div modal-footer>
+      <button (click)="closeAboutModal()" class="btn btn-info text-white rounded-pill px-4">
+        Got it
+      </button>
+    </div>
+  </app-modal>
+</section>
+
 <!--^ ======================== -->
 <!--^ Hero Section -->
 <!--^ ======================== -->
