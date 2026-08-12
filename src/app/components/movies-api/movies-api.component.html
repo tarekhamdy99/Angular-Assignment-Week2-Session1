@@ -1,0 +1,81 @@
+<h2 class="fs-1 fw-bolder text-center my-5">All Movies</h2>
+
+<div class="container py-5">
+  <div class="row g-4">
+    @for (movie of moviesData; track movie.id) {
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="tv-card h-100">
+          <!-- Poster -->
+          <div class="tv-poster">
+            <img
+              [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+              [alt]="movie.title ? movie.title : movie.name"
+              class="poster-image"
+            />
+
+            <!-- Media Type -->
+            <span class="media-badge">
+              <i class="fa-solid fa-tv me-1"></i>
+              {{ movie.media_type | uppercase }}
+            </span>
+
+            <!-- Rating -->
+            <div class="rating-badge">
+              <i class="fa-solid fa-star"></i>
+              {{ movie.vote_average }}
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="tv-content">
+            <!-- Title -->
+            <h5 class="tv-title">
+              {{ movie.title ? movie.title : movie.name }}
+            </h5>
+
+            <!-- Original Name -->
+            <p class="original-name">
+              {{ movie.original_title || movie.title || movie.name }}
+            </p>
+
+            <!-- Meta -->
+            <div class="tv-meta">
+              <span>
+                <i class="fa-regular fa-calendar me-1"></i>
+                {{ movie.first_air_date | date: 'yyyy' }}
+              </span>
+
+              <span>
+                <i class="fa-solid fa-language me-1"></i>
+                {{ movie.original_language | uppercase }}
+              </span>
+
+              <span>
+                <i class="fa-solid fa-users me-1"></i>
+                {{ movie.vote_count }}
+              </span>
+            </div>
+
+            <!-- Overview -->
+            <p class="tv-overview">
+              {{ movie.overview }}
+            </p>
+
+            <!-- Footer -->
+            <div class="tv-footer">
+              <span class="popularity">
+                <i class="fa-solid fa-fire me-1"></i>
+                {{ movie.popularity }}
+              </span>
+
+              <button class="btn btn-view">
+                View Details
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

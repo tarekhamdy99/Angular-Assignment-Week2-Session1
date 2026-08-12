@@ -1,0 +1,221 @@
+.tv-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+
+  border: 1px solid #e9ecef;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tv-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ================================
+   Poster
+================================ */
+
+.tv-poster {
+  position: relative;
+
+  height: 420px;
+
+  background: #f1f3f5;
+
+  overflow: hidden;
+}
+
+.poster-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.tv-card:hover .poster-image {
+  transform: scale(1.06);
+}
+
+/* ================================
+   Media Badge
+================================ */
+
+.media-badge {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  backdrop-filter: blur(5px);
+}
+
+/* ================================
+   Rating
+================================ */
+
+.rating-badge {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 7px 10px;
+
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.rating-badge i {
+  color: #ffc107;
+}
+
+/* ================================
+   Content
+================================ */
+
+.tv-content {
+  padding: 20px;
+}
+
+.tv-title {
+  margin-bottom: 4px;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: #212529;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.original-name {
+  margin-bottom: 15px;
+
+  color: #6c757d;
+
+  font-size: 0.85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+/* ================================
+   Meta
+================================ */
+
+.tv-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #e9ecef;
+
+  color: #6c757d;
+
+  font-size: 0.78rem;
+}
+
+.tv-meta i {
+  color: #495057;
+}
+
+/* ================================
+   Overview
+================================ */
+
+.tv-overview {
+  margin: 15px 0;
+
+  color: #6c757d;
+
+  font-size: 0.88rem;
+
+  line-height: 1.6;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+  min-height: 90px;
+}
+
+/* ================================
+   Footer
+================================ */
+
+.tv-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.popularity {
+  color: #dc3545;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.btn-view {
+  border-radius: 10px;
+
+  padding: 8px 14px;
+
+  background: #212529;
+  color: #ffffff;
+
+  font-size: 0.8rem;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-view:hover {
+  background: #000000;
+
+  transform: translateX(3px);
+}
